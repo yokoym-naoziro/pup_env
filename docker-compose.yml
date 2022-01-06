@@ -1,0 +1,16 @@
+version: "3"
+services:
+  puppet:
+    container_name: puppet_demo
+    build:
+      # root ./docker
+      context: ./docker
+      dockerfile: ./puppeteer/Dockerfile
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./app/dev_pup:/app
+      # node_modulesをマウント対象外にする
+      - /app/node_modules
+    environment:
+      - TZ=Asia/Tokyo
