@@ -7,7 +7,7 @@ docker-compose up -d
 ```
 ## コンテナに入る
 ```
-docker exec -it puppet /bin/bash
+docker exec -it puppet_demo /bin/bash
 ```
 ## puppetコンテナ内で実行
 ```
